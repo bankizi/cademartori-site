@@ -2,8 +2,9 @@ export const COMPANY = {
   name: 'CADEMARTORI Z SOCIEDADE PRESTADORA DE SERVIÇOS DE ATIVOS VIRTUAIS LTDA',
   shortName: 'Cademartori Z',
   cnpj: '51.039.021/0001-51',
-  address: 'Rio de Janeiro, RJ – Brasil',
-  email: 'cademartorizs1@gmail.com',
+  address: 'Uruguaiana, RS – Brasil',
+  email: 'contato@cademartoriz.com.br',
+  ombudsmanEmail: 'ouvidoria@cademartoriz.com.br',
   phone: '+55 (55) 99976-5175',
   dpo: {
     name: 'Encarregado de Proteção de Dados',
@@ -12,7 +13,7 @@ export const COMPANY = {
   regulation: {
     authority: 'Banco Central do Brasil',
     status: 'Em processo de autorização perante o Banco Central do Brasil',
-    type: 'SPSAV – Sociedade Prestadora de Serviços de Ativos Virtuais',
+    type: 'PSAV de Intermediação e Negociação de Ativos Virtuais',
     modalities: ['Intermediação de Ativos Virtuais'],
     legalBasis: 'Os serviços descritos são prestados em conformidade com a Lei nº 14.478/2022 e as Resoluções BCB nº 519, 520 e 521/2025.',
   },

@@ -142,6 +142,31 @@ export function RegulatoryContent() {
                 </div>
               ))}
             </div>
+            <aside
+              aria-labelledby="custody-notice-title"
+              className="mt-5 rounded-lg border border-brand-blue-light border-l-4 border-l-brand-gold bg-white p-4 sm:p-5"
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0 rounded-lg bg-brand-blue-lighter p-2.5">
+                  <ShieldCheck
+                    aria-hidden="true"
+                    className="h-5 w-5 text-brand-blue"
+                  />
+                </div>
+                <h3
+                  id="custody-notice-title"
+                  className="text-sm font-semibold text-brand-blue"
+                >
+                  Custódia e segregação patrimonial
+                </h3>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                A empresa não realiza a custódia de ativos virtuais. Os ativos e
+                recursos dos clientes são mantidos de forma segregada dos
+                recursos próprios da empresa, não se confundindo com o seu
+                patrimônio.
+              </p>
+            </aside>
           </div>
         </ScrollReveal>
 

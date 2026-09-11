@@ -30,7 +30,7 @@ export function Footer() {
             </p>
             <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 border border-white/20 px-3 py-1.5 text-xs font-medium text-white">
               <span className="h-2 w-2 rounded-full bg-brand-gold" />
-              PSAV em processo de regulação
+              PSAV em processo de autorização
             </div>
           </div>
 
@@ -81,10 +81,10 @@ export function Footer() {
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-gold" />
                 <a
-                  href={`mailto:${COMPANY.email}`}
+                  href={`mailto:${COMPANY.ombudsmanEmail}`}
                   className="text-sm text-brand-blue-light hover:text-white transition-colors"
                 >
-                  {COMPANY.email}
+                  {COMPANY.ombudsmanEmail}
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
@@ -115,7 +115,7 @@ export function Footer() {
             </div>
             <p>
               Os serviços descritos são prestados em conformidade com a Lei nº
-              14.478/2022 e as Resoluções BCB nº 519, 520 e 521/2025.
+              14.478/2022 e Resoluções BCB nº 519/2025 e nº 520/2025
             </p>
           </div>
         </Container>

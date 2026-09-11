@@ -50,8 +50,8 @@ const jsonLd = {
   description: 'Prestadora de serviços de ativos virtuais (VASP) regulada pelo Banco Central do Brasil.',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Rio de Janeiro',
-    addressRegion: 'RJ',
+    addressLocality: 'Uruguaiana',
+    addressRegion: 'RS',
     addressCountry: 'BR',
   },
   contactPoint: {
