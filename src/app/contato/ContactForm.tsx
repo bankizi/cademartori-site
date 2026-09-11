@@ -216,7 +216,10 @@ export function ContactForm() {
         <p className="text-xs text-text-muted text-center">
           Ao enviar, seus dados serão usados para responder à sua solicitação e tratados conforme
           nossa{' '}
-          <a href="/termos#privacidade" className="text-brand-gold-dark hover:underline">
+          <a
+            href="/regulatorio#politica-de-privacidade"
+            className="text-brand-gold-dark hover:underline"
+          >
             Política de Privacidade
           </a>.
         </p>

@@ -50,6 +50,46 @@ const companyInfo = [
   },
 ];
 
+const compliancePolicies = [
+  {
+    id: 'politica-de-kyc',
+    title: 'Política de KYC – Conheça seu cliente',
+    description:
+      'Todos os clientes passam por um processo estruturado de identificação, verificação e qualificação antes do início das operações. O KYC é um procedimento legal obrigatório que garante a rastreabilidade das transações, previne o uso da plataforma para fins ilícitos e assegura que os recursos envolvidos tenham origem lícita e comprovada, em conformidade com a Lei nº 14.478/2022 e as Resoluções BCB nº 519 e 520/2025.',
+  },
+  {
+    id: 'politica-de-pld',
+    title:
+      'Política de PLD/FT – Prevenção à Lavagem de Dinheiro e ao Financiamento ao Terrorismo',
+    description:
+      'A Cademartori Z mantém políticas estruturadas de prevenção à lavagem de dinheiro e ao financiamento do terrorismo, em conformidade com a Lei nº 9.613/1998, a Circular BCB nº 3.978/2020 e as Resoluções BCB nº 519 e 520/2025. Todos os colaboradores, parceiros e prestadores de serviços estão sujeitos a essas diretrizes, que abrangem identificação de clientes, monitoramento de operações e comunicação de situações suspeitas ao COAF.',
+  },
+  {
+    id: 'politica-de-elegibilidade',
+    title: 'Política de Elegibilidade e Listagem de Ativos Virtuais',
+    description:
+      'Critérios técnicos, regulatórios e de integridade orientam a seleção, listagem, revisão e eventual suspensão dos ativos virtuais disponibilizados aos clientes. Cada ativo passa por avaliação estruturada de riscos tecnológicos, operacionais, de liquidez e de conformidade com as normas de PLD/FT, conduzida por um Comitê interno multidisciplinar. Somente ativos com documentação adequada, rastreabilidade de transações e histórico íntegro são elegíveis para oferta.',
+  },
+  {
+    id: 'termos-de-uso',
+    title: 'Termos de Uso',
+    description:
+      'O acesso e uso da plataforma estão condicionados à leitura e aceitação destes termos, que regulam os direitos e obrigações do usuário na utilização dos serviços de intermediação de ativos virtuais. O usuário declara estar ciente dos riscos inerentes ao mercado de ativos virtuais, incluindo volatilidade, liquidez e riscos tecnológicos, sendo integralmente responsável pelas operações realizadas.',
+  },
+  {
+    id: 'politica-de-cookies',
+    title: 'Política de Cookies',
+    description:
+      'Cookies são utilizados para garantir o correto funcionamento da plataforma, personalizar a experiência de navegação e aprimorar continuamente os serviços oferecidos. Os dados coletados são tratados em conformidade com a Lei Geral de Proteção de Dados (LGPD), e o usuário pode gerenciar suas preferências de cookies a qualquer momento diretamente pelo navegador ou dispositivo.',
+  },
+  {
+    id: 'politica-de-privacidade',
+    title: 'Política de Privacidade',
+    description:
+      'Os dados pessoais coletados durante o uso da plataforma são tratados exclusivamente para as finalidades declaradas, como identificação cadastral, execução de operações, prevenção a fraudes e cumprimento de obrigações legais e regulatórias. Todo o tratamento é realizado em conformidade com a Lei Geral de Proteção de Dados (LGPD) e demais normas aplicáveis, assegurando ao titular o direito de acessar, corrigir e solicitar a exclusão de suas informações.',
+  },
+];
+
 export function RegulatoryContent() {
   return (
     <section className="py-16 lg:py-24">
@@ -112,36 +152,14 @@ export function RegulatoryContent() {
               Políticas de Conformidade
             </h2>
             <div className="space-y-6 text-sm leading-relaxed text-text-secondary">
-              <div>
-                <h3 className="mb-2 font-semibold text-text-primary">
-                  Prevenção à Lavagem de Dinheiro (PLD/FTP)
-                </h3>
-                <p>
-                  Mantemos políticas rigorosas de Prevenção à Lavagem de Dinheiro e ao Financiamento
-                  do Terrorismo, em conformidade com as diretrizes do COAF e do Banco Central do Brasil.
-                  Todos os clientes passam por procedimentos de Know Your Customer (KYC) e monitoramento
-                  contínuo de transações.
-                </p>
-              </div>
-              <div>
-                <h3 className="mb-2 font-semibold text-text-primary">
-                  Governança Corporativa
-                </h3>
-                <p>
-                  Nossa estrutura de governança garante segregação de funções, controles internos robustos
-                  e processos de tomada de decisão transparentes, alinhados às melhores práticas do mercado
-                  financeiro.
-                </p>
-              </div>
-              <div>
-                <h3 className="mb-2 font-semibold text-text-primary">
-                  Segurança da Informação
-                </h3>
-                <p>
-                  Adotamos padrões elevados de segurança cibernética, incluindo criptografia de dados,
-                  monitoramento 24/7, testes de penetração periódicos e plano de resposta a incidentes.
-                </p>
-              </div>
+              {compliancePolicies.map((policy) => (
+                <div id={policy.id} key={policy.id} className="scroll-mt-28">
+                  <h3 className="mb-2 font-semibold text-text-primary">
+                    {policy.title}
+                  </h3>
+                  <p>{policy.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </ScrollReveal>
@@ -149,7 +167,7 @@ export function RegulatoryContent() {
         {/* Update date */}
         <div className="mt-10 flex items-center justify-center gap-2 text-xs text-text-muted">
           <Calendar className="h-3.5 w-3.5" />
-          Última atualização: Abril de 2026
+          Última atualização: Setembro de 2026
         </div>
       </Container>
     </section>

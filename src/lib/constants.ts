@@ -27,8 +27,12 @@ export const NAV_LINKS = [
 ] as const;
 
 export const FOOTER_LEGAL_LINKS = [
-  { label: 'Termos de Uso', href: '/termos' },
-  { label: 'Política de Privacidade', href: '/termos#privacidade' },
+  { label: 'Manual de KYC', href: '/regulatorio#politica-de-kyc' },
+  { label: 'Termos de Uso', href: '/regulatorio#termos-de-uso' },
+  { label: 'Política de PLD', href: '/regulatorio#politica-de-pld' },
+  { label: 'Política de Privacidade', href: '/regulatorio#politica-de-privacidade' },
+  { label: 'Política de Cookies', href: '/regulatorio#politica-de-cookies' },
+  { label: 'Política de Elegibilidade', href: '/regulatorio#politica-de-elegibilidade' },
 ] as const;
 
 export const FGC_WARNING = `ATENÇÃO: Os serviços prestados pela ${COMPANY.name} envolvendo ativos virtuais NÃO possuem cobertura do Fundo Garantidor de Créditos (FGC). Ativos virtuais não são moeda de curso legal, não são garantidos pelo governo federal e estão sujeitos a riscos, incluindo a possibilidade de perda total do capital investido.`;
