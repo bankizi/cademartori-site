@@ -1,13 +1,12 @@
 'use client';
 
-import { useState } from 'react';
-import { Mail, Phone, MapPin, ShieldCheck, Send, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, ShieldCheck, Clock } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { ScrollReveal } from '@/components/animation/ScrollReveal';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
 import { StaggerItem } from '@/components/animation/StaggerItem';
-import { Button } from '@/components/ui/Button';
 import { COMPANY } from '@/lib/constants';
+import { ContactForm } from './ContactForm';
 
 const contactChannels = [
   {
@@ -41,23 +40,6 @@ const contactChannels = [
 ];
 
 export function ContactContent() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const mailtoLink = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Nome: ${formData.name}\nE-mail: ${formData.email}\n\n${formData.message}`
-    )}`;
-    window.location.href = mailtoLink;
-  };
-
   return (
     <section className="py-16 lg:py-24">
       <Container>
@@ -119,105 +101,7 @@ export function ContactContent() {
 
           {/* Contact form */}
           <ScrollReveal direction="right">
-            <div className="rounded-2xl bg-white border border-border-light p-6 md:p-8 shadow-sm">
-              <h2 className="mb-6 text-xl font-bold text-brand-blue">
-                Envie uma mensagem
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-1.5 block text-sm font-medium text-text-primary"
-                  >
-                    Nome completo
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    className="w-full rounded-lg border border-border-medium bg-white px-4 py-3 text-sm text-text-primary placeholder:text-text-muted transition-all"
-                    placeholder="Seu nome"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-1.5 block text-sm font-medium text-text-primary"
-                  >
-                    E-mail
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    className="w-full rounded-lg border border-border-medium bg-white px-4 py-3 text-sm text-text-primary placeholder:text-text-muted transition-all"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="mb-1.5 block text-sm font-medium text-text-primary"
-                  >
-                    Assunto
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    required
-                    value={formData.subject}
-                    onChange={(e) =>
-                      setFormData({ ...formData, subject: e.target.value })
-                    }
-                    className="w-full rounded-lg border border-border-medium bg-white px-4 py-3 text-sm text-text-primary placeholder:text-text-muted transition-all"
-                    placeholder="Assunto da mensagem"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-1.5 block text-sm font-medium text-text-primary"
-                  >
-                    Mensagem
-                  </label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="w-full rounded-lg border border-border-medium bg-white px-4 py-3 text-sm text-text-primary placeholder:text-text-muted transition-all resize-none"
-                    placeholder="Escreva sua mensagem..."
-                  />
-                </div>
-
-                <Button type="submit" variant="primary" size="lg" className="w-full">
-                  <Send className="mr-2 h-4 w-4" />
-                  Enviar mensagem
-                </Button>
-
-                <p className="text-xs text-text-muted text-center">
-                  Ao enviar, você será redirecionado para seu cliente de e-mail.
-                  Seus dados serão tratados conforme nossa{' '}
-                  <a href="/termos#privacidade" className="text-brand-gold-dark hover:underline">
-                    Política de Privacidade
-                  </a>.
-                </p>
-              </form>
-            </div>
+            <ContactForm />
           </ScrollReveal>
         </div>
       </Container>
