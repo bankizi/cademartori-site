@@ -30,12 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/termos`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
       url: `${baseUrl}/contato`,
       lastModified,
       changeFrequency: 'yearly',
