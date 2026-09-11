@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
@@ -42,14 +43,17 @@ export function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-2 text-brand-blue font-bold text-xl"
-              aria-label="Cademartori Z - Página inicial"
+              className="flex shrink-0 items-center"
+              aria-label="Cademartori Zamudio — Página inicial"
             >
-              {/* Placeholder para logo — substituir por Image quando disponível */}
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-blue text-white font-bold text-lg">
-                CZ
-              </div>
-              <span className="hidden sm:inline">Cademartori Z</span>
+              <Image
+                src="/images/logo-azul.png"
+                alt=""
+                width={2715}
+                height={642}
+                preload
+                className="h-7 w-auto max-w-none sm:h-10"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -76,14 +80,11 @@ export function Header() {
             {/* Right side */}
             <div className="flex items-center gap-3">
               {/* CTA — desktop */}
-              <Button
-                href="#"
-                variant="primary"
-                size="sm"
-                className="hidden md:inline-flex"
-              >
-                Enviar documentação
-              </Button>
+              <div className="hidden md:block">
+                <Button href="#" variant="primary" size="sm">
+                  Enviar documentação
+                </Button>
+              </div>
 
               {/* Mobile menu button */}
               <button

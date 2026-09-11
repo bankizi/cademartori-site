@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Container } from './Container';
@@ -13,12 +14,16 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-white font-bold text-xl mb-4"
+              className="inline-flex items-center mb-4"
+              aria-label="Cademartori Zamudio — Página inicial"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-brand-blue font-bold text-lg">
-                CZ
-              </div>
-              <span>Cademartori Z</span>
+              <Image
+                src="/images/logo-branco.png"
+                alt=""
+                width={2715}
+                height={642}
+                className="h-11 w-auto sm:h-12"
+              />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-brand-blue-light">
               Prestadora de serviços de ativos virtuais em processo de regulação pelo Banco Central do Brasil.
