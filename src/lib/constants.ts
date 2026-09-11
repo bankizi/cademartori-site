@@ -1,37 +1,34 @@
 export const COMPANY = {
-  name: 'CADEMARTORI Z SOLUÇÕES LTDA',
+  name: 'CADEMARTORI Z SOCIEDADE PRESTADORA DE SERVIÇOS DE ATIVOS VIRTUAIS LTDA',
   shortName: 'Cademartori Z',
-  cnpj: '00.000.000/0001-00', // Placeholder - atualizar com CNPJ real
-  address: 'São Paulo, SP - Brasil', // Placeholder - atualizar com endereço real
-  email: 'contato@cademartori.com.br',
-  phone: '+55 (11) 0000-0000',
+  cnpj: '51.039.021/0001-51',
+  address: 'Rio de Janeiro, RJ – Brasil',
+  email: 'cademartorizs1@gmail.com',
+  phone: '+55 (55) 99976-5175',
   dpo: {
     name: 'Encarregado de Proteção de Dados',
-    email: 'dpo@cademartori.com.br',
+    email: 'cademartorizs1@gmail.com',
   },
   regulation: {
     authority: 'Banco Central do Brasil',
-    status: 'Regulada',
-    type: 'VASP - Prestadora de Serviços de Ativos Virtuais',
-    modalities: ['Intermediação de Ativos Virtuais', 'Custódia de Ativos Virtuais', 'Staking'],
-    legalBasis: 'Lei nº 14.478/2022 e Resolução BCB nº 338/2023',
+    status: 'Em processo de autorização perante o Banco Central do Brasil',
+    type: 'SPSAV – Sociedade Prestadora de Serviços de Ativos Virtuais',
+    modalities: ['Intermediação de Ativos Virtuais'],
+    legalBasis: 'Os serviços descritos são prestados em conformidade com a Lei nº 14.478/2022 e as Resoluções BCB nº 519, 520 e 521/2025.',
   },
 } as const;
 
 export const NAV_LINKS = [
   { label: 'Início', href: '/' },
   { label: 'Serviços', href: '/servicos' },
-  { label: 'Tarifas', href: '/tarifas' },
   { label: 'Conformidade', href: '/regulatorio' },
   { label: 'Ativos', href: '/ativos' },
   { label: 'Contato', href: '/contato' },
 ] as const;
 
 export const FOOTER_LEGAL_LINKS = [
-  { label: 'Regulatório', href: '/regulatorio' },
   { label: 'Termos de Uso', href: '/termos' },
   { label: 'Política de Privacidade', href: '/termos#privacidade' },
-  { label: 'Tarifas', href: '/tarifas' },
 ] as const;
 
 export const FGC_WARNING = `ATENÇÃO: Os serviços prestados pela ${COMPANY.name} envolvendo ativos virtuais NÃO possuem cobertura do Fundo Garantidor de Créditos (FGC). Ativos virtuais não são moeda de curso legal, não são garantidos pelo governo federal e estão sujeitos a riscos, incluindo a possibilidade de perda total do capital investido.`;
@@ -39,72 +36,33 @@ export const FGC_WARNING = `ATENÇÃO: Os serviços prestados pela ${COMPANY.nam
 export const SERVICES = [
   {
     id: 'intermediacao',
-    title: 'Intermediação',
-    description: 'Facilitamos a compra e venda de ativos virtuais com segurança, transparência e conformidade regulatória.',
+    title: 'Compra e Venda',
+    description: 'Facilitamos a negociação de ativos virtuais de forma ágil, segura e transparente.',
     icon: 'ArrowLeftRight',
   },
   {
     id: 'custodia',
-    title: 'Custódia',
-    description: 'Armazenamento seguro dos seus ativos virtuais com infraestrutura de nível institucional e proteção avançada.',
-    icon: 'Shield',
+    title: 'Conexão com o Mercado',
+    description: 'Acesso direto às melhores oportunidades do mercado de ativos virtuais por meio de uma intermediária dedicada.',
+    icon: 'Network',
   },
   {
     id: 'staking',
-    title: 'Staking',
-    description: 'Participe da validação de redes blockchain e obtenha recompensas de forma regulamentada e transparente.',
-    icon: 'Layers',
+    title: 'Operações Seguras',
+    description: 'Cada operação realizada com rastreabilidade, conformidade e total clareza para o cliente.',
+    icon: 'ShieldCheck',
   },
 ] as const;
 
 export const CRYPTO_ASSETS = [
-  { name: 'Bitcoin', ticker: 'BTC', category: 'Criptomoeda' },
-  { name: 'Ethereum', ticker: 'ETH', category: 'Criptomoeda' },
-  { name: 'Solana', ticker: 'SOL', category: 'Criptomoeda' },
-  { name: 'Cardano', ticker: 'ADA', category: 'Criptomoeda' },
-  { name: 'Polygon', ticker: 'POL', category: 'Token' },
-  { name: 'Chainlink', ticker: 'LINK', category: 'Token' },
-  { name: 'USD Coin', ticker: 'USDC', category: 'Stablecoin' },
-  { name: 'Tether', ticker: 'USDT', category: 'Stablecoin' },
-] as const;
-
-export const FEE_TABLE = [
-  {
-    service: 'Intermediação (Compra)',
-    trigger: 'Execução de ordem de compra',
-    value: 'A partir de 0,5%',
-    observation: 'Sobre o valor da operação',
-  },
-  {
-    service: 'Intermediação (Venda)',
-    trigger: 'Execução de ordem de venda',
-    value: 'A partir de 0,5%',
-    observation: 'Sobre o valor da operação',
-  },
-  {
-    service: 'Custódia',
-    trigger: 'Manutenção mensal',
-    value: 'Isento',
-    observation: 'Sem taxa de custódia',
-  },
-  {
-    service: 'Transferência (Entrada)',
-    trigger: 'Depósito de ativos virtuais',
-    value: 'Isento',
-    observation: 'Sujeito a taxa de rede (gas fee)',
-  },
-  {
-    service: 'Transferência (Saída)',
-    trigger: 'Saque de ativos virtuais',
-    value: 'Taxa de rede + R$ 5,00',
-    observation: 'Variável conforme a blockchain',
-  },
-  {
-    service: 'Staking',
-    trigger: 'Distribuição de recompensas',
-    value: '10% sobre rendimentos',
-    observation: 'Sobre as recompensas recebidas',
-  },
+  { name: 'Bitcoin', ticker: 'BTC', category: 'Criptomoeda', icon: '/icons/crypto/bitcoin.svg' },
+  { name: 'Ethereum', ticker: 'ETH', category: 'Criptomoeda', icon: '/icons/crypto/ethereum.svg' },
+  { name: 'Solana', ticker: 'SOL', category: 'Criptomoeda', icon: '/icons/crypto/solana.svg' },
+  { name: 'Cardano', ticker: 'ADA', category: 'Criptomoeda', icon: '/icons/crypto/cardano.svg' },
+  { name: 'Polygon', ticker: 'POL', category: 'Token', icon: '/icons/crypto/polygon.svg' },
+  { name: 'Chainlink', ticker: 'LINK', category: 'Token', icon: '/icons/crypto/chainlink.svg' },
+  { name: 'USD Coin', ticker: 'USDC', category: 'Stablecoin', icon: '/icons/crypto/usdc.svg' },
+  { name: 'Tether', ticker: 'USDT', category: 'Stablecoin', icon: '/icons/crypto/tether.svg' },
 ] as const;
 
 export const RISKS = [

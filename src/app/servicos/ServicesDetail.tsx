@@ -2,8 +2,7 @@
 
 import {
   ArrowLeftRight,
-  Shield,
-  Layers,
+  Braces,
   CheckCircle2,
 } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
@@ -24,29 +23,17 @@ const services = [
     ],
   },
   {
-    icon: Shield,
-    title: 'Custódia de Ativos Virtuais',
+    icon: Braces,
+    title: 'API para Negócios',
     description:
-      'Armazenamos seus ativos virtuais com infraestrutura de segurança de nível institucional, utilizando as melhores práticas do mercado para proteção dos seus investimentos.',
+      'Consulte cotações, defina ordens e execute operações com ativos virtuais diretamente da sua própria plataforma, de forma personalizada e integrada ao seu negócio.',
     features: [
-      'Armazenamento em cold wallets',
-      'Protocolo de segurança multicamadas',
-      'Backup e redundância de dados',
-      'Segregação patrimonial dos ativos',
-      'Auditoria periódica de segurança',
-    ],
-  },
-  {
-    icon: Layers,
-    title: 'Staking',
-    description:
-      'Participe da validação de redes blockchain e receba recompensas de forma regulamentada. Nosso serviço de staking é transparente e segue todas as normas aplicáveis.',
-    features: [
-      'Participação em redes Proof of Stake',
-      'Distribuição transparente de recompensas',
-      'Relatórios periódicos de rendimentos',
-      'Sem lock-up obrigatório para ativos selecionados',
-      'Conformidade tributária facilitada',
+      'Cotações em tempo real via API',
+      'Criação e gestão de ordens pela sua plataforma',
+      'Notificações automáticas de status das operações',
+      'Ambiente de testes para homologação',
+      'Documentação técnica completa',
+      'Suporte dedicado para integração',
     ],
   },
 ];

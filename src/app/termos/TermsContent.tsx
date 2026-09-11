@@ -10,7 +10,7 @@ const sections = [
     title: '1. Termos Gerais',
     content: `Ao utilizar os serviços da ${COMPANY.name}, o usuário declara ter lido, compreendido e aceito integralmente estes Termos de Uso. A utilização de qualquer serviço implica na aceitação automática de todas as condições aqui estabelecidas.
 
-A ${COMPANY.shortName} é uma Prestadora de Serviços de Ativos Virtuais (VASP) devidamente autorizada pelo Banco Central do Brasil, nos termos da ${COMPANY.regulation.legalBasis}.`,
+A ${COMPANY.shortName} é uma Sociedade Prestadora de Serviços de Ativos Virtuais (SPSAV) em processo de autorização perante o Banco Central do Brasil. ${COMPANY.regulation.legalBasis}`,
   },
   {
     id: 'custodia',

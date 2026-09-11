@@ -6,7 +6,7 @@ import { RiskDisclosure } from '@/components/ui/RiskDisclosure';
 export const metadata: Metadata = {
   title: 'Serviços',
   description:
-    'Conheça nossos serviços de intermediação, custódia e staking de criptoativos, todos regulamentados pelo Banco Central do Brasil.',
+    'Conheça nossos serviços de intermediação de ativos virtuais e integração via API para negócios.',
 };
 
 export default function ServicosPage() {
@@ -18,7 +18,7 @@ export default function ServicosPage() {
         subtitle="Oferecemos serviços regulamentados que combinam tecnologia de ponta com conformidade regulatória para atender suas necessidades."
       />
       <ServicesDetail />
-      <RiskDisclosure />
+      <RiskDisclosure title="Riscos que você precisa conhecer" isCompact />
     </>
   );
 }

@@ -10,18 +10,18 @@ import { Button } from '@/components/ui/Button';
 const highlights = [
   {
     icon: ShieldCheck,
-    title: 'VASP Autorizada',
-    description: 'Prestadora de Serviços de Ativos Virtuais com autorização do Banco Central do Brasil.',
+    title: 'Processo de autorização PSAV',
+    description: 'Empresa em processo de autorização junto ao Banco Central do Brasil como Prestadora de Serviços de Ativos Virtuais.',
   },
   {
     icon: Scale,
     title: 'Compliance Ativo',
-    description: 'Políticas robustas de PLD/FTP e KYC em total conformidade com a regulamentação vigente.',
+    description: 'Políticas estruturadas de PLD/FTP e KYC em alinhamento com a regulamentação vigente.',
   },
   {
     icon: FileText,
     title: 'Base Legal',
-    description: 'Operações fundamentadas na Lei nº 14.478/2022 e Resolução BCB nº 338/2023.',
+    description: 'Operações fundamentadas na Lei nº 14.478/2022 e Resoluções BCB nº 519, 520 e 521/2025.',
   },
 ];
 
@@ -40,9 +40,9 @@ export function RegulationHighlight() {
                 Transparência e segurança em cada operação
               </h2>
               <p className="mt-4 text-base leading-relaxed text-text-secondary md:text-lg">
-                A Cademartori Z opera sob supervisão do Banco Central do Brasil,
-                garantindo que todas as operações com ativos virtuais sigam os mais
-                altos padrões de conformidade e governança.
+                A Cademartori Z atua com compromisso integral com transparência e
+                conformidade, adotando as melhores práticas do mercado de ativos
+                virtuais em alinhamento com a regulamentação brasileira.
               </p>
               <div className="mt-8">
                 <Button href="/regulatorio" variant="outline">

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, ShieldCheck } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { clsx } from 'clsx';
 import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
@@ -75,12 +75,6 @@ export function Header() {
 
             {/* Right side */}
             <div className="flex items-center gap-3">
-              {/* BACEN Badge — desktop only */}
-              <div className="hidden xl:flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1.5 text-xs font-medium text-green-700">
-                <ShieldCheck className="h-3.5 w-3.5" />
-                Regulada pelo BACEN
-              </div>
-
               {/* CTA — desktop */}
               <Button
                 href="#"
@@ -88,7 +82,7 @@ export function Header() {
                 size="sm"
                 className="hidden md:inline-flex"
               >
-                Abrir conta
+                Enviar documentação
               </Button>
 
               {/* Mobile menu button */}

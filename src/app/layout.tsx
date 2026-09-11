@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { FGCAlertBanner } from '@/components/ui/FGCAlertBanner';
 import './globals.css';
 
 const poppins = Poppins({
@@ -57,7 +56,7 @@ const jsonLd = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'contato@cademartori.com.br',
+    email: 'cademartorizs1@gmail.com',
     contactType: 'customer service',
     availableLanguage: 'Portuguese',
   },
@@ -77,7 +76,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col font-[family-name:var(--font-poppins)]">
-        <FGCAlertBanner />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

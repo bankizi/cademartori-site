@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Container } from '@/components/layout/Container';
 import { ScrollReveal } from '@/components/animation/ScrollReveal';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
@@ -7,7 +8,7 @@ import { StaggerItem } from '@/components/animation/StaggerItem';
 import { Card } from '@/components/ui/Card';
 import { RiskDisclosure } from '@/components/ui/RiskDisclosure';
 import { CRYPTO_ASSETS } from '@/lib/constants';
-import { Coins, Info, ListChecks } from 'lucide-react';
+import { Info, ListChecks } from 'lucide-react';
 
 const categoryColors: Record<string, string> = {
   Criptomoeda: 'bg-brand-blue/10 text-brand-blue',
@@ -25,9 +26,13 @@ export function AssetsContent() {
             {CRYPTO_ASSETS.map((asset) => (
               <StaggerItem key={asset.ticker}>
                 <Card className="text-center" padding="lg">
-                  {/* Placeholder for asset icon */}
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-offwhite">
-                    <Coins className="h-7 w-7 text-brand-blue" />
+                    <Image
+                      src={asset.icon}
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </div>
                   <h3 className="text-lg font-bold text-text-primary">{asset.name}</h3>
                   <p className="mt-1 text-sm font-medium text-text-muted">{asset.ticker}</p>
@@ -72,11 +77,11 @@ export function AssetsContent() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-blue flex-shrink-0" />
-                    Due diligence sobre a equipe e histórico do projeto
+                    Due diligence sobre o projeto, sua governança e histórico disponível
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-blue flex-shrink-0" />
-                    Revisão periódica e possibilidade de delisting conforme critérios internos
+                    Revisão periódica e possibilidade de deslistagem conforme critérios internos
                   </li>
                 </ul>
               </div>
@@ -97,7 +102,7 @@ export function AssetsContent() {
         </Container>
       </section>
 
-      <RiskDisclosure />
+      <RiskDisclosure title="Riscos que você precisa conhecer" isCompact />
     </>
   );
 }

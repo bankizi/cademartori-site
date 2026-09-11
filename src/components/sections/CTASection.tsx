@@ -29,12 +29,12 @@ export function CTASection() {
             Comece agora com a Cademartori Z
           </h2>
           <p className="mt-4 text-base text-brand-blue/70 md:text-lg mx-auto max-w-2xl">
-            Abra sua conta e tenha acesso a serviços de criptoativos regulamentados
-            pelo Banco Central do Brasil.
+            Envie seus documentos, ative sua conta e tenha acesso imediato a
+            criptoativos.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button href="#" variant="primary" size="lg">
-              Abrir conta
+              Enviar documentos
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button href="/contato" variant="ghost" size="lg" className="text-brand-blue hover:bg-brand-blue/5">

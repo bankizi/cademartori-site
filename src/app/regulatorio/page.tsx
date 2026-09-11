@@ -5,7 +5,7 @@ import { RegulatoryContent } from './RegulatoryContent';
 export const metadata: Metadata = {
   title: 'Conformidade Regulatória',
   description:
-    'Informações regulatórias da Cademartori Z Soluções LTDA, VASP regulada pelo Banco Central do Brasil. Razão social, CNPJ, modalidades e base legal.',
+    'Informações regulatórias da Cademartori Z, SPSAV em processo de autorização perante o Banco Central do Brasil.',
 };
 
 export default function RegulatorioPage() {

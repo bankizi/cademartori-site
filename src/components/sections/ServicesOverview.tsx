@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeftRight, Shield, Layers, ArrowRight } from 'lucide-react';
+import { ArrowLeftRight, Network, ShieldCheck, ArrowRight } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
@@ -12,8 +12,8 @@ import Link from 'next/link';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   ArrowLeftRight,
-  Shield,
-  Layers,
+  Network,
+  ShieldCheck,
 };
 
 export function ServicesOverview() {
@@ -24,7 +24,7 @@ export function ServicesOverview() {
           <SectionHeading
             eyebrow="Nossos Serviços"
             title="Soluções completas em ativos virtuais"
-            subtitle="Oferecemos serviços regulamentados de intermediação, custódia e staking com total transparência e conformidade regulatória."
+            subtitle="Atuamos como sua intermediária no mercado de ativos virtuais, conectando você às melhores operações."
           />
         </ScrollReveal>
 

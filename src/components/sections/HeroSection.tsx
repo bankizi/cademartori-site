@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { heroStagger, heroItem } from '@/lib/animations';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/layout/Container';
@@ -55,14 +55,6 @@ export function HeroSection() {
           animate="visible"
           className="mx-auto max-w-4xl text-center"
         >
-          {/* Badge */}
-          <motion.div variants={heroItem} className="mb-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur-sm border border-brand-blue-light/50 px-4 py-2 text-sm font-medium text-brand-blue shadow-sm">
-              <ShieldCheck className="h-4 w-4 text-green-600" />
-              VASP Regulada pelo Banco Central do Brasil
-            </div>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             variants={heroItem}
@@ -82,8 +74,8 @@ export function HeroSection() {
             variants={heroItem}
             className="mt-6 text-base leading-relaxed text-text-secondary md:text-lg lg:text-xl"
           >
-            Intermediação, custódia e staking de ativos virtuais com a confiança
-            de uma empresa regulada e comprometida com a transparência.
+            Sua porta de entrada para o mercado de ativos virtuais — ágil,
+            segura e transparente.
           </motion.p>
 
           {/* CTAs */}
@@ -92,7 +84,7 @@ export function HeroSection() {
             className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
             <Button href="#" variant="primary" size="lg">
-              Abrir conta
+              Enviar documentação
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button href="/servicos" variant="outline" size="lg">
@@ -107,7 +99,7 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 rounded-full bg-green-500" />
-              Regulada pelo BACEN
+              Processo de regulação pelo Bacen
             </div>
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 rounded-full bg-brand-blue" />

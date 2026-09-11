@@ -95,7 +95,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
               <div className="space-y-3 pt-6 border-t border-border-light">
                 <Button href="#" variant="primary" size="lg" className="w-full">
-                  Abrir conta
+                  Enviar documentação
                 </Button>
               </div>
             </div>

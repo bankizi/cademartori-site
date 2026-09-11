@@ -6,9 +6,9 @@ import { Container } from '@/components/layout/Container';
 import { fadeInUp } from '@/lib/animations';
 
 const stats = [
-  { value: 8, suffix: '+', label: 'Ativos listados' },
-  { value: 3, suffix: '', label: 'Serviços regulamentados' },
-  { value: 100, suffix: '%', label: 'Conformidade BACEN' },
+  { value: 100, suffix: '+', label: 'Ativos listados' },
+  { value: 170, suffix: '+', label: 'Clientes satisfeitos' },
+  { value: 100, suffix: '%', label: 'Transparência nas operações' },
   { value: 24, suffix: '/7', label: 'Monitoramento ativo' },
 ];
 

@@ -21,11 +21,11 @@ export function Footer() {
               <span>Cademartori Z</span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-brand-blue-light">
-              Prestadora de serviços de ativos virtuais regulada pelo Banco Central do Brasil.
+              Prestadora de serviços de ativos virtuais em processo de regulação pelo Banco Central do Brasil.
             </p>
             <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 border border-white/20 px-3 py-1.5 text-xs font-medium text-white">
-              <span className="h-2 w-2 rounded-full bg-green-400" />
-              VASP Regulada
+              <span className="h-2 w-2 rounded-full bg-brand-gold" />
+              PSAV em processo de regulação
             </div>
           </div>
 
@@ -100,26 +100,29 @@ export function Footer() {
         </div>
       </Container>
 
-      {/* FGC Warning bar */}
-      <div className="border-t border-white/10 bg-brand-blue-dark">
-        <Container className="py-4">
-          <p className="text-xs leading-relaxed text-brand-blue-light/80">
-            <strong className="text-brand-gold">AVISO FGC:</strong>{' '}
-            {FGC_WARNING}
-          </p>
-        </Container>
-      </div>
-
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <Container className="py-4">
-          <div className="flex flex-col items-center justify-between gap-3 text-xs text-brand-blue-light/60 md:flex-row">
-            <div className="text-center md:text-left">
+          <div className="grid gap-3 text-center text-xs text-brand-blue-light/60 md:grid-cols-2 md:text-left">
+            <div>
               <p>{COMPANY.name} — CNPJ: {COMPANY.cnpj}</p>
               <p className="mt-0.5">{COMPANY.address}</p>
             </div>
-            <p>{COMPANY.regulation.legalBasis}</p>
+            <p>
+              Os serviços descritos são prestados em conformidade com a Lei nº
+              14.478/2022 e as Resoluções BCB nº 519, 520 e 521/2025.
+            </p>
           </div>
+        </Container>
+      </div>
+
+      {/* FGC Warning bar */}
+      <div className="border-t border-white/10 bg-brand-blue-dark">
+        <Container className="py-3">
+          <p className="text-[0.625rem] leading-relaxed text-brand-blue-light/80">
+            <strong className="text-brand-gold">AVISO FGC:</strong>{' '}
+            {FGC_WARNING}
+          </p>
         </Container>
       </div>
     </footer>

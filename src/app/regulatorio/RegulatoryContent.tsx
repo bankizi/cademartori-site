@@ -41,7 +41,7 @@ const companyInfo = [
   {
     icon: ShieldCheck,
     label: 'Status',
-    value: COMPANY.regulation.status + ' pelo ' + COMPANY.regulation.authority,
+    value: COMPANY.regulation.status,
   },
   {
     icon: Scale,
@@ -86,16 +86,16 @@ export function RegulatoryContent() {
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="h-6 w-6 text-brand-blue" />
               <h2 className="text-xl font-bold text-brand-blue">
-                Modalidades Autorizadas
+                Modalidade em processo de autorização
               </h2>
             </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4">
               {COMPANY.regulation.modalities.map((modality) => (
                 <div
                   key={modality}
                   className="flex items-center gap-3 rounded-lg bg-white border border-border-light p-4"
                 >
-                  <div className="h-3 w-3 rounded-full bg-green-500 flex-shrink-0" />
+                  <div className="h-3 w-3 rounded-full bg-brand-gold flex-shrink-0" />
                   <span className="text-sm font-medium text-text-primary">
                     {modality}
                   </span>
